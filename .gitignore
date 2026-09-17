@@ -1,0 +1,20 @@
+# Reference videos (large, not part of the game)
+*.mp4
+*.mkv
+*.webm
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Node
+node_modules/
+
+# Extraction scratch output
+tools/out/
+tools/screenshots/
+__pycache__/
+docs/
+.claude/
+!backup/

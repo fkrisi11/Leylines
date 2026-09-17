@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Leylines</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="board"></canvas>
+
+<div id="hud" class="screen" hidden>
+  <button id="btn-menu" class="btn small">Menu</button>
+  <div id="hud-level"></div>
+  <div id="debug-bar" hidden>
+    <button id="dbg-prev" class="btn small">◀ Prev</button>
+    <button id="dbg-next" class="btn small">Next ▶</button>
+    <button id="dbg-peek" class="btn small" aria-pressed="false">Peek solution</button>
+    <span id="dbg-name"></span>
+  </div>
+</div>
+<div id="toast" hidden></div>
+
+<div id="menu" class="screen panel">
+  <h1>Leylines</h1>
+  <p class="sub">Click two points to swap them. Untangle every line.</p>
+  <button id="btn-campaign" class="btn">Campaign</button>
+  <div class="row">
+    <button id="btn-infinite" class="btn">Infinite</button>
+    <select id="tier-select" aria-label="Infinite difficulty"></select>
+  </div>
+  <label class="skin">Theme <select id="skin-select"></select></label>
+  <label class="skin"><input type="checkbox" id="sway-check"> Line sway</label>
+</div>
+
+<div id="levels" class="screen panel" hidden>
+  <h2>Campaign</h2>
+  <div id="section-tabs" role="tablist"></div>
+  <div id="level-grid"></div>
+  <button id="btn-back" class="btn small">Back</button>
+</div>
+
+<div id="summary" class="screen panel" hidden>
+  <h2 id="summary-title">Section complete</h2>
+  <ol id="summary-list"></ol>
+  <button id="btn-summary-menu" class="btn">Menu</button>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
